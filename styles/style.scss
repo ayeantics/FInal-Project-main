@@ -1,7 +1,9 @@
 body {
   margin: 0;
+  padding: 0;
   font-family: "Montserrat", sans-serif;
   // height: 200vh;
+  overflow-x: hidden;
 }
 
 * {
@@ -178,6 +180,12 @@ body {
             border-radius: 5px;
             font-size: 14px;
             font-weight: 600;
+            transition: 0.1s ease-in-out;
+
+            &:hover {
+              background-color: #fff;
+              color: #23a6f0;
+            }
           }
 
           .learn-more-button {
@@ -187,6 +195,12 @@ body {
             color: #23a6f0;
             font-size: 14px;
             font-weight: 700;
+            transition: 0.1s ease-in-out;
+
+            &:hover {
+              border: 1px solid #288bb5;
+              color: #288bb5;
+            }
           }
         }
       }
@@ -339,9 +353,10 @@ body {
       font-size: 14px;
       transition: 0.2s ease-in-out;
       max-width: 24%;
+      transition: all 0.2s ease-in-out;
 
-      &:hover {
-        font-size: 16px;
+      &:hover i {
+        margin-left: 5px;
       }
     }
   }
@@ -601,10 +616,21 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
+        transition: 0.2s ease-in-out;
 
         i {
           margin-left: 10px;
           font-size: 20px;
+          transition: 0.2s ease-in-out;
+        }
+
+        &:hover {
+          border: 1px solid #288bb5;
+          color: #288bb5;
+        }
+
+        &:hover i {
+          margin-left: 15px;
         }
       }
     }
@@ -622,10 +648,13 @@ body {
   align-items: center;
 
   .comments-container {
-    // .sale-heading {
+    margin-top: 200px;
+    .sale-heading {
+      position: relative;
+      right: 70px;
       // margin-right: 580px;
-      // margin-top: 300px; amgenis gamo ver vaketebdi responsivs... iyos samaxsovrod :D
-    // }
+      //  margin-top: 300px; //amgenis gamo ver vaketebdi responsivs... iyos samaxsovrod :D
+    }
 
     .comment-row {
       display: flex;
@@ -822,17 +851,28 @@ input[type="email"] {
   body {
     overflow-x: hidden;
   }
-  .nav-bar .nav-buttons {
+
+  .nav-bar {
     right: 0;
+    .nav-buttons {
+      right: 15px;
+    }
   }
 
   .nav-links ul {
     flex-direction: column;
     margin-top: 15px;
 
+    .nav-list {
+      position: relative;
+      right: 15px;
+    }
+
     .brand-side {
       margin-right: 0;
       margin-bottom: 15px;
+      position: relative;
+      left: 10px;
     }
   }
 
@@ -941,8 +981,11 @@ input[type="email"] {
   }
 
   .comments-container {
+    margin-top: 0 !important;
     .sale-heading {
       text-align: center;
+      right: 0;
+      left: 0;
 
       p {
         margin: 0 30px;
@@ -988,6 +1031,30 @@ input[type="email"] {
       .footer-socials {
         margin: auto;
       }
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .lower-container {
+    .cards {
+      flex-direction: column;
+
+      .card1,
+      .card2,
+      .card3 {
+        width: 80% !important;
+      }
+    }
+  }
+
+  .comments-container {
+    .sale-heading {
+      left: 0;
     }
   }
 }

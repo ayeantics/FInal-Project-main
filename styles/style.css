@@ -1,6 +1,8 @@
 body {
   margin: 0;
+  padding: 0;
   font-family: "Montserrat", sans-serif;
+  overflow-x: hidden;
 }
 
 * {
@@ -148,6 +150,11 @@ body {
   border-radius: 5px;
   font-size: 14px;
   font-weight: 600;
+  transition: 0.1s ease-in-out;
+}
+.section .cards-container .upper-container .text-container .upper-buttons .get-quote-now-button:hover {
+  background-color: #fff;
+  color: #23a6f0;
 }
 .section .cards-container .upper-container .text-container .upper-buttons .learn-more-button {
   padding: 15px 40px;
@@ -156,6 +163,11 @@ body {
   color: #23a6f0;
   font-size: 14px;
   font-weight: 700;
+  transition: 0.1s ease-in-out;
+}
+.section .cards-container .upper-container .text-container .upper-buttons .learn-more-button:hover {
+  border: 1px solid #288bb5;
+  color: #288bb5;
 }
 .section .cards-container .lower-container {
   padding-bottom: 50px;
@@ -291,9 +303,10 @@ body {
   font-size: 14px;
   transition: 0.2s ease-in-out;
   max-width: 24%;
+  transition: all 0.2s ease-in-out;
 }
-.first-article .packages-left-side .package-learn-more:hover {
-  font-size: 16px;
+.first-article .packages-left-side .package-learn-more:hover i {
+  margin-left: 5px;
 }
 .first-article .packages-right-side img {
   max-width: 100%;
@@ -501,10 +514,19 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: 0.2s ease-in-out;
 }
 .sale-card .card-lower-content .course-learn-more-wrap .course-learn-more i {
   margin-left: 10px;
   font-size: 20px;
+  transition: 0.2s ease-in-out;
+}
+.sale-card .card-lower-content .course-learn-more-wrap .course-learn-more:hover {
+  border: 1px solid #288bb5;
+  color: #288bb5;
+}
+.sale-card .card-lower-content .course-learn-more-wrap .course-learn-more:hover i {
+  margin-left: 15px;
 }
 
 .main-card-image {
@@ -515,6 +537,13 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.third-article .comments-container {
+  margin-top: 200px;
+}
+.third-article .comments-container .sale-heading {
+  position: relative;
+  right: 70px;
 }
 .third-article .comments-container .comment-row {
   display: flex;
@@ -688,16 +717,25 @@ input[type=email] {
   body {
     overflow-x: hidden;
   }
-  .nav-bar .nav-buttons {
+  .nav-bar {
     right: 0;
+  }
+  .nav-bar .nav-buttons {
+    right: 15px;
   }
   .nav-links ul {
     flex-direction: column;
     margin-top: 15px;
   }
+  .nav-links ul .nav-list {
+    position: relative;
+    right: 15px;
+  }
   .nav-links ul .brand-side {
     margin-right: 0;
     margin-bottom: 15px;
+    position: relative;
+    left: 10px;
   }
   .section .cards-container .upper-container .text-container {
     width: 100%;
@@ -780,8 +818,13 @@ input[type=email] {
     text-align: center;
     margin: 50px;
   }
+  .comments-container {
+    margin-top: 0 !important;
+  }
   .comments-container .sale-heading {
     text-align: center;
+    right: 0;
+    left: 0;
   }
   .comments-container .sale-heading p {
     margin: 0 30px;
@@ -815,5 +858,21 @@ input[type=email] {
   }
   .footer .footer-container .footer-get-in-touch .footer-socials {
     margin: auto;
+  }
+}
+@media screen and (max-width: 1000px) {
+  body {
+    overflow-x: hidden;
+  }
+  .lower-container .cards {
+    flex-direction: column;
+  }
+  .lower-container .cards .card1,
+  .lower-container .cards .card2,
+  .lower-container .cards .card3 {
+    width: 80% !important;
+  }
+  .comments-container .sale-heading {
+    left: 0;
   }
 }/*# sourceMappingURL=style.css.map */
